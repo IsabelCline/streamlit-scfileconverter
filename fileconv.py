@@ -13,9 +13,9 @@
 # limitations under the License.
 
 import streamlit as st
-from streamlit.logger import get_logger
+#from streamlit.logger import get_logger
 
-LOGGER = get_logger(__name__)
+#LOGGER = get_logger(__name__)
 
 
 def run():
@@ -24,7 +24,6 @@ def run():
     )
 
     st.write("# Single-Cell File Converter")
-
     #st.sidebar.success("Select a demo above.")
 
     st.markdown(
@@ -34,6 +33,7 @@ def run():
         started by uploading the file you'd like to convert below:
     """
     )
+    input_file = st.file_uploader('Upload a file', type = ['csv', 'txt', 'mtx', 'h5ad'])
 
 
 if __name__ == "__main__":
